@@ -1,7 +1,35 @@
-.main {
-    display: flex;
-    background-color: lightgreen;
-    top: 72px;
-    left: 200px;
+.main-container {
+    display: grid;
+    grid-template-rows: 3fr 2fr 200px;
+    background-color: rgb(253, 253, 196);
+    height: 100%;
     z-index: 100;
 }
+
+.images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    padding-bottom: 100px;
+}
+
+.main-image {
+    background-color: lightblue;
+}
+
+.comments-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.comment-input-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
