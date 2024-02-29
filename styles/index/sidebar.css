@@ -1,0 +1,15 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 72px;
+    bottom: 0;
+    background-color: lightpink;
+    width: 200px;
+}
+
+.feature-border {
+    display: flex;
+    flex-direction: column;
+
+}

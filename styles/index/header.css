@@ -1,0 +1,11 @@
+.header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+    justify-content: space-between;
+    height: 72px;
+}
