@@ -34,7 +34,7 @@ if ($_FILES["image"]["error"] == 4) {
     $stmt->bind_param("sss", $amount, $prename, $surname);
 } else {
     $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname, image) VALUES (?, ?, ?, ?)");
-    if ($_FILES["image"]["size"] <= 1000000) {
+    if ($_FILES["image"]["size"] <= 1048576) {
         $blob_data = file_get_contents($_FILES["image"]["tmp_name"]);
         $stmt->bind_param("ssss", $amount, $prename, $surname, $blob_data);
     } else {
