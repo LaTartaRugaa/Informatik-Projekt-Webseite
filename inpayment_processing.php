@@ -1,4 +1,19 @@
 <?php
+
+function check_field($tag, $required, $int) {
+    $exit = FALSE;
+    if ($required == TRUE and empty($_POST[$tag])) {
+        $exit = "Fill in all the required fields";
+    } elseif ($int == TRUE and is_numeric($_POST[$tag]) != "integer") {
+        $exit .= "One field only accepts integer values";
+    }
+    if ($exit != FALSE) {
+        die($exit);
+    }
+    return $_POST[$tag];
+}
+
+
 $user = "root";
 $password = "root";
 $host = "localhost";
@@ -9,11 +24,11 @@ if ($conn->connect_errno) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$amount = $_POST["amount"];
-$prename = $_POST["prename"];
-$surname = $_POST["surname"];
+$amount = check_field("amount", TRUE, TRUE);
+$prename = check_field("prename", TRUE, FALSE);
+$surname = check_field("surname", TRUE, FALSE);
 
-// Überprüfen, ob $_Files leer ist (Error 4: No file was uploaded)
+// Überprüfen, ob $_FILES leer ist (Error 4: No file was uploaded)
 if ($_FILES["image"]["error"] == 4) {
     $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $amount, $prename, $surname);
@@ -31,4 +46,5 @@ if ($stmt->execute()) {
 $stmt->close();
 
 $conn->close();
+
 ?>
