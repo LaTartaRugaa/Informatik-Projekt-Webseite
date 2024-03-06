@@ -2,12 +2,12 @@
 
 function check_field($tag, $required, $int) {
     $exit = FALSE;
-    if ($required == TRUE and empty($_POST[$tag])) {
+    if ($required and empty($_POST[$tag])) {
         $exit = "Fill in all the required fields";
-    } elseif ($int == TRUE and is_numeric($_POST[$tag]) != "integer") {
+    } elseif ($int and is_numeric($_POST[$tag]) == FALSE) {
         $exit .= "One field only accepts integer values";
     }
-    if ($exit != FALSE) {
+    if ($exit) {
         die($exit);
     }
     return $_POST[$tag];
@@ -34,8 +34,12 @@ if ($_FILES["image"]["error"] == 4) {
     $stmt->bind_param("sss", $amount, $prename, $surname);
 } else {
     $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname, image) VALUES (?, ?, ?, ?)");
-    $blob_data = file_get_contents($_FILES["image"]["tmp_name"]);
-    $stmt->bind_param("ssss", $amount, $prename, $surname, $blob_data);
+    if ($_FILES["image"]["size"] <= 1000000) {
+        $blob_data = file_get_contents($_FILES["image"]["tmp_name"]);
+        $stmt->bind_param("ssss", $amount, $prename, $surname, $blob_data);
+    } else {
+        die("Max. file size is 1Mb");
+    }
 }
 
 if ($stmt->execute()) {

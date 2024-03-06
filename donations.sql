@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Erstellungszeit: 06. Mrz 2024 um 16:15
+-- Erstellungszeit: 06. Mrz 2024 um 19:56
 -- Server-Version: 5.7.24
 -- PHP-Version: 8.0.1
 
@@ -32,7 +32,7 @@ CREATE TABLE `inpayment` (
   `amount` int(255) NOT NULL,
   `prename` varchar(255) NOT NULL,
   `surname` varchar(255) NOT NULL,
-  `image` longblob
+  `image` mediumblob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
