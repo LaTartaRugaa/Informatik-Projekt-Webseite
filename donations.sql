@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Erstellungszeit: 29. Feb 2024 um 08:52
--- Server-Version: 5.7.39
--- PHP-Version: 7.4.33
+-- Host: localhost:3306
+-- Erstellungszeit: 06. Mrz 2024 um 16:15
+-- Server-Version: 5.7.24
+-- PHP-Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,8 @@ CREATE TABLE `inpayment` (
   `id` int(10) UNSIGNED NOT NULL,
   `amount` int(255) NOT NULL,
   `prename` varchar(255) NOT NULL,
-  `surname` varchar(255) NOT NULL
+  `surname` varchar(255) NOT NULL,
+  `image` longblob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
