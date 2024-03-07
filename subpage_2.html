@@ -3,8 +3,9 @@
 
     <head>
 
-        <link rel="stylesheet" href="styles/index/header.css">
-        <link rel="stylesheet" href="styles/index/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/subpage_2.css">
 
         <meta charset="UTF-8" />
         <title>Beispielformular</title>
@@ -26,26 +27,26 @@
             <div class="right-section">
               <p>right</p>
             </div>
-          </div>
+        </div>
 
-          <!DOCTYPE html>
+        <div class="main">
+            <form action="inpayment_processing.php" method="post" enctype="multipart/form-data">
+              <div class="donation-form">
+                <div class="names-inputs">
+                  <p>first name:</p>
+                  <p>last name:</p>
+                  <input class="input-field" type="text" name="prename" size="20" maxlength="30" />
+                  <input class="input-field" type="text" name="surname" size="20" maxlength="30" />
+                </div>
+                <p>Amount:</p>
+                <input class="input-field" type="text" name="amount" size="15" maxlength="30" />
+                <p>Image (Max. 1Mb):</p>
+                <input class="input-field" type="file" name="image" accept="image/*" />
+                <input class="input-field" type="submit" value="Submit" />
+              </div>
+            </form>
+        </div>
 
-<form action="inpayment_processing.php" method="post" enctype="multipart/form-data">
-  Prename: <br />
-  <input type="text" name="prename" size="20" maxlength="30" />
-  <br />
-  Surname: <br />
-  <input type="text" name="surname" size="20" maxlength="30" />
-  <br />
-  Amount: <br />
-  <input type="text" name="amount" size="15" maxlength="30" />
-  <br />
-  Image (max. 1Mb): <br />
-  <input type="file" name="image" accept="image/*" />
-  <br />
-  <br />
-  <input type="submit" value="Submit" />
-</form>
 
 
     </body>
