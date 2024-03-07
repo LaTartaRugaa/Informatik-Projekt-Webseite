@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Erstellungszeit: 06. Mrz 2024 um 19:56
--- Server-Version: 5.7.24
--- PHP-Version: 8.0.1
+-- Host: localhost:8889
+-- Erstellungszeit: 07. Mrz 2024 um 08:18
+-- Server-Version: 5.7.39
+-- PHP-Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `inpayment` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `amount` int(255) NOT NULL,
+  `id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
   `prename` varchar(255) NOT NULL,
   `surname` varchar(255) NOT NULL,
   `image` mediumblob
@@ -53,7 +53,7 @@ ALTER TABLE `inpayment`
 -- AUTO_INCREMENT für Tabelle `inpayment`
 --
 ALTER TABLE `inpayment`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

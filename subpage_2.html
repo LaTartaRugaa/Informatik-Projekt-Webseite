@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="styles/index/header.css">
         <link rel="stylesheet" href="styles/index/general.css">
 
+        <meta charset="UTF-8" />
+        <title>Beispielformular</title>
+
     </head>
 
     <body>
@@ -25,7 +28,25 @@
             </div>
           </div>
 
-          <p>Subpage 2</p>
+          <!DOCTYPE html>
+
+<form action="inpayment_processing.php" method="post" enctype="multipart/form-data">
+  Prename: <br />
+  <input type="text" name="prename" size="20" maxlength="30" />
+  <br />
+  Surname: <br />
+  <input type="text" name="surname" size="20" maxlength="30" />
+  <br />
+  Amount: <br />
+  <input type="text" name="amount" size="15" maxlength="30" />
+  <br />
+  Image (max. 1Mb): <br />
+  <input type="file" name="image" accept="image/*" />
+  <br />
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+
 
     </body>
 
