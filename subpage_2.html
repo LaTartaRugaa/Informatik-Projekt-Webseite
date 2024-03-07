@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/subpage_2.css">
+
+        <meta charset="UTF-8" />
+        <title>Beispielformular</title>
+
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div class="left-section">
+              <p>logo</p>
+            </div>
+            <div class="middle-section">
+                <a href="index.html" class="link-subpage">Home</a>
+                <a href="subpage_1.html" class="link-subpage">subpage 1</a>
+                <a href="subpage_2.html" class="link-subpage">subpage 2</a>
+                <a href="subpage_3.html" class="link-subpage">subpage 3</a>
+            </div>
+            <div class="right-section">
+              <p>right</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <form action="inpayment_processing.php" method="post" enctype="multipart/form-data">
+              <div class="donation-form">
+                <div class="names-inputs">
+                  <p>first name:</p>
+                  <p>last name:</p>
+                  <input class="input-field" type="text" name="prename" size="20" maxlength="30" />
+                  <input class="input-field" type="text" name="surname" size="20" maxlength="30" />
+                </div>
+                <p>Amount:</p>
+                <input class="input-field" type="text" name="amount" size="15" maxlength="30" />
+                <p>Image (Max. 1Mb):</p>
+                <input class="input-field" type="file" name="image" accept="image/*" />
+                <input class="input-field" type="submit" value="Submit" />
+              </div>
+            </form>
+        </div>
+
+
+
+    </body>
+
+</html>

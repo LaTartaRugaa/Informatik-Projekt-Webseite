@@ -1,0 +1,17 @@
+.sidebar {
+    position: fixed;
+    left: 0px;
+    top: 72px;
+    bottom: 0;
+    background-color: lightpink;
+    width: 200px;
+}
+
+.sidebar-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+    height: 72px;
+}
