@@ -8,6 +8,7 @@
 <body>
     <h1>Bild anzeigen</h1>
     <?php
+
         $user = "root";
         $password = "root";
         $host = "localhost";
@@ -18,19 +19,22 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT image FROM inpayment WHERE id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id);
-        $id = 1; // Setze die ID des Datensatzes, dessen Bild du anzeigen möchtest
-        $stmt->execute();
-        $stmt->bind_result($image_data);
-        $stmt->fetch();
-        $stmt->close();
+        $sql = "SELECT amount, prename, surname, image FROM inpayment";
+        $result = mysqli_query($conn, $sql);
 
-        // Konvertiere das Blob in ein Base64-codiertes Bild
-        $image_base64 = base64_encode($image_data);
+        $sql_result_array = array();
+
+        if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                $sql_result_array[] = array("amount" => $row["amount"], "prename" => $row["prename"], "surname" => $row["surname"], "image" => $row["image"]);
+            }
+        }
+
+        $conn->close();
+
+        
     ?>
     
-    <img src="data:image/jpeg;base64,<?php echo $image_base64; ?>" alt="Bild">
+   
 </body>
 </html>
