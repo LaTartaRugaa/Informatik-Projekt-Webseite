@@ -6,8 +6,11 @@
     <title>Bild anzeigen</title>
 </head>
 <body>
-    <h1>Bild anzeigen</h1>
+    <h1>Thank You!</h1>
     <?php
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+        
 
         $user = "root";
         $password = "root";
@@ -32,9 +35,21 @@
 
         $conn->close();
 
+        foreach ($sql_result_array as $user) {
+            echo '<div style="margin: 5px; text-align: center;">';
+
+            if ($user["image"] != NULL) {
+                $image_base64 = base64_encode($user["image"]);
+                echo '<img src="data:image/jpeg;base64,' . $image_base64 . '" alt="Bild" style="width: 200px; height: auto; margin: 5px;">';
+            } else {
+                echo '<img src=images/default_profile.png alt="Bild" style="width: 200px; height: auto; margin: 5px;">';
+            }
+
+            echo '<p>' . $user["prename"] . " " . $user["surname"] . ": " . $user["amount"] . " CHF" . '</p>';
+            echo '</div>';
+        }
+
         
     ?>
-    
-   
 </body>
 </html>
