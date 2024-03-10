@@ -1,27 +1,116 @@
 .main {
     display: flex;
-    background-color: rgb(253, 253, 196);
 }
 
 .donation-form {
     display: flex;
-    background-color: lightgreen;
-    height: 400px;
+    height: 500px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 30px 20px 40px 20px;
+    border: 2px solid grey;
+    box-shadow: 3px 3px 3px lightgrey;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
 }
 
 .names-inputs {
     display: grid;
     grid-template-columns: 200px 200px;
-    background-color: lightpink;
-    padding: 20px;
     column-gap: 20px;
 }
 
-.input-field {
+.amount-input,
+.email-input {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+
+}
+
+.image-form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.image-input {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 1fr;
+    padding-right: 20px;
+}
+
+.image-preview-container {
+    width: 100px;
+    height:100px;
+    border: 2px solid grey;
+    border-radius: 100px;
+}
+
+.chosen-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-color: white;
+    border-radius: 100px;;
+}
+
+/* imported code: prevent borders around images without [src] value/attribute */
+
+img[src=""],
+img:not([src]){
+  opacity: 0;
+}
+
+img[src="*"]{
+  opacity: 1;
+}
+
+/* ---------------------------------------------------- */
+
+.search-image {
+    font-size: 16px;
+}
+
+.search-image[type="file"] {
+    display: none;
+}
+
+.select-image-button {
+    border: 2px solid rgb(5, 106, 248);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submit-button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    width: 120px;
+    height: 32px;
+    background-color: rgb(5, 106, 248);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-field[type="text"] {
     border: none;
     height: 24px;
     border-radius: 3px;
+    border: 2px solid rgb(5, 106, 248);
 }
+
+
