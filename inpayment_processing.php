@@ -27,16 +27,17 @@ if ($conn->connect_errno) {
 $amount = check_field("amount", TRUE, TRUE);
 $prename = check_field("prename", TRUE, FALSE);
 $surname = check_field("surname", TRUE, FALSE);
+$email = check_field("email", TRUE, FALSE);
 
 // Überprüfen, ob $_FILES leer ist (Error 4: No file was uploaded)
 if ($_FILES["image"]["error"] == 4) {
-    $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $amount, $prename, $surname);
+    $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname, email) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $amount, $prename, $surname, $email);
 } else {
-    $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname, image) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname, email, image) VALUES (?, ?, ?, ?, ?)");
     if ($_FILES["image"]["size"] <= 1048576) {
         $blob_data = file_get_contents($_FILES["image"]["tmp_name"]);
-        $stmt->bind_param("ssss", $amount, $prename, $surname, $blob_data);
+        $stmt->bind_param("ssss", $amount, $prename, $surname, $email, $blob_data);
     } else {
         die("Max. file size is 1Mb");
     }
