@@ -3,7 +3,6 @@
 .main-container {
     display: grid;
     grid-template-rows: 4fr 2fr 200px;
-    background-color: rgb(253, 253, 196);
     height: 100%;
     z-index: 100;
 }

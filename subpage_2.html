@@ -31,43 +31,57 @@
         </div>
 
         <div class="main">
-            <form action="inpayment_processing.php" method="post" enctype="multipart/form-data">
-              <div class="donation-form">
-                <div class="form-title">enter info to donate</div>
-                <div class="form-inputs">
-                  <div class="names-inputs">
-                    <p>First name:</p>
-                    <p>Last name:</p>
-                    <input class="input-field" type="text" name="prename" size="20" maxlength="30" />
-                    <input class="input-field" type="text" name="surname" size="20" maxlength="30" />
-                  </div>
-                  <div class="email-input">
-                    <p>Email:</p>
-                    <input class="input-field" type="text" name="amount" size="15" maxlength="30" />
-                  </div>
-                  <div class="amount-input">
-                    <p>Amount:</p>
-                    <input class="input-field" type="text" name="amount" size="15" maxlength="30" />
-                  </div>
-                  <div class="image-form">
-                    <div class="image-input">
-                      <p>Image (Max. 1Mb):</p>
-                      <input class="input-field search-image" type="file" id="image" name="image" accept="image/*" />
-                      <label for="image">
-                        <div class="select-image-button" id="select-image-button">
-                          <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                          Choose a photo
-                        </div>
-                      </label>
-                    </div>
-                    <figure class="image-preview-container">
-                      <img class="chosen-image" id="chosen-image">
-                    </figure>
-                  </div>
+          <form action="inpayment_processing.php" method="post" enctype="multipart/form-data">
+            <div class="donation-form">
+              <div class="form-title">enter info to donate</div>
+              <div class="form-inputs">
+                <div class="names-inputs">
+                  <p>First name:</p>
+                  <p>Last name:</p>
+                  <input class="input-field" type="text" name="prename" size="20" maxlength="30" />
+                  <input class="input-field" type="text" name="surname" size="20" maxlength="30" />
                 </div>
-                <input class="input-field submit-button" type="submit" value="Submit" />
+                <div class="email-input">
+                  <p>Email:</p>
+                  <input class="input-field" type="text" name="amount" size="15" maxlength="30" />
+                </div>
+                <div class="amount-input">
+                  <p>Amount:</p>
+                  <input class="input-field" type="text" name="amount" placeholder="CHF" size="15" maxlength="30" />
+                </div>
+                <div class="image-form">
+                  <div class="image-input">
+                    <p>Image (Max. 1Mb):</p>
+                    <input class="input-field search-image" type="file" id="image" name="image" accept="image/*" />
+                    <label for="image">
+                      <div class="select-image-button" id="select-image-button">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        Choose a photo
+                      </div>
+                    </label>
+                  </div>
+                  <figure class="image-preview-container">
+                    <img class="chosen-image" id="chosen-image">
+                  </figure>
+                </div>
               </div>
-            </form>
+              <input class="input-field submit-button" type="submit" value="Submit" />
+            </div>
+          </form>
+          <div class="donations-container">
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+            <div class="donation">Donation</div>
+          </div>
         </div>
 
 

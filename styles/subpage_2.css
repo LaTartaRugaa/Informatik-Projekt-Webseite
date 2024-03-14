@@ -9,10 +9,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px 20px 40px 20px;
-    border: 2px solid grey;
-    box-shadow: 3px 3px 3px lightgrey;
+    border: 2px solid rgb(255, 237, 136);
+    box-shadow: 3px 3px 3px rgb(99, 92, 50);
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(23, 23, 23);
 }
 
 .form-title {
@@ -52,7 +52,7 @@
 .image-preview-container {
     width: 100px;
     height:100px;
-    border: 2px solid grey;
+    border: 2px solid rgb(255, 237, 136);
     border-radius: 100px;
 }
 
@@ -86,7 +86,7 @@ img[src="*"]{
 }
 
 .select-image-button {
-    border: 2px solid rgb(5, 106, 248);
+    border: 2px solid rgb(255, 237, 136);
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
@@ -100,8 +100,8 @@ img[src="*"]{
     border-radius: 50px;
     width: 120px;
     height: 32px;
-    background-color: rgb(5, 106, 248);
-    color: white;
+    background-color: rgb(255, 237, 136);
+    color: black;
     font-size: 16px;
     cursor: pointer;
 }
@@ -110,7 +110,29 @@ img[src="*"]{
     border: none;
     height: 24px;
     border-radius: 3px;
-    border: 2px solid rgb(5, 106, 248);
+    border: 2px solid rgb(255, 237, 136);
 }
 
+.donations-container {
+    position: absolute;
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    right: 30px;
+    top: 90px;
+    bottom: 20px;
+    width: 60%;
+    border: 2px solid black;
+}
+
+.donation {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-right: none;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
