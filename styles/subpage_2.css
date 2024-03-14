@@ -117,7 +117,7 @@ img[src="*"]{
     position: absolute;
     background-color: lightgreen;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
     right: 30px;
     top: 90px;
@@ -136,3 +136,13 @@ img[src="*"]{
     justify-content: center;
 }
 
+.donation-image {
+    grid-column: 4 / 5;
+    height: 100px;
+    width: 100px;
+}
+
+.image {
+    object-fit: cover;
+    height: 100%;
+}

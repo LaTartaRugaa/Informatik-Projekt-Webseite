@@ -15,4 +15,4 @@ selectImageButton.onchange = () => {
     }
 }
 
-/* ------------------------- */
+/* source: https://www.youtube.com/watch?v=KgqV0i_ZgLs */

@@ -20,6 +20,18 @@
     min-width: 200px;
 }
 
+.logo-container {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin-left: 40px;
+}
+
+.logo {
+    object-fit: cover;
+    border-radius: 100px;;
+}
+
 .middle-section {
     display: flex;
     flex-direction: row;
