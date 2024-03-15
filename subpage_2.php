@@ -68,15 +68,11 @@
               <input class="input-field submit-button" type="submit" value="Submit" />
             </div>
           </form>
+
           <div class="donations-container">
-
-            <div class="donation donation-image">
-              <img class="image" src="images/oelscheich-kostuem--mw-108452-1.webp">
-            </div>
-
             <?php include 'donations_query.php'; ?>
-
           </div>
+          
         </div>
 
 
