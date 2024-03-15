@@ -37,7 +37,7 @@ if ($_FILES["image"]["error"] == 4) {
     $stmt = $conn->prepare("INSERT INTO inpayment (amount, prename, surname, email, image) VALUES (?, ?, ?, ?, ?)");
     if ($_FILES["image"]["size"] <= 1048576) {
         $blob_data = file_get_contents($_FILES["image"]["tmp_name"]);
-        $stmt->bind_param("ssss", $amount, $prename, $surname, $email, $blob_data);
+        $stmt->bind_param("sssss", $amount, $prename, $surname, $email, $blob_data);
     } else {
         die("Max. file size is 1Mb");
     }
