@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px 20px 40px 20px;
-    border: 2px solid rgb(255, 237, 136);
+    border: 2px solid rgb(255, 208, 0);
     box-shadow: 3px 3px 3px rgb(99, 92, 50);
     border-radius: 10px;
     background-color: rgb(23, 23, 23);
@@ -52,7 +52,7 @@
 .image-preview-container {
     width: 100px;
     height:100px;
-    border: 2px solid rgb(255, 237, 136);
+    border: 2px solid rgb(255, 208, 0);
     border-radius: 100px;
 }
 
@@ -86,7 +86,7 @@ img[src="*"]{
 }
 
 .select-image-button {
-    border: 2px solid rgb(255, 237, 136);
+    border: 2px solid rgb(255, 208, 0);
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
@@ -100,7 +100,7 @@ img[src="*"]{
     border-radius: 50px;
     width: 120px;
     height: 32px;
-    background-color: rgb(255, 237, 136);
+    background-color: rgb(255, 208, 0);
     color: black;
     font-size: 16px;
     cursor: pointer;
@@ -110,12 +110,11 @@ img[src="*"]{
     border: none;
     height: 24px;
     border-radius: 3px;
-    border: 2px solid rgb(255, 237, 136);
+    border: 2px solid rgb(255, 208, 0);
 }
 
 .donations-container {
     position: absolute;
-    background-color: lightgreen;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
@@ -123,11 +122,13 @@ img[src="*"]{
     top: 90px;
     bottom: 20px;
     width: 60%;
-    border: 2px solid black;
     height: fit-content;
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
+    border: 3px solid rgb(255, 208, 0);
+    border-radius: 8px;
+    background-color: rgb(23, 23, 23);
 }
 
 .donation {
@@ -138,6 +139,11 @@ img[src="*"]{
     align-items: center;
     justify-content: flex-start;
     max-width: 100px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid rgb(255, 208, 0);
+    border-radius: 8px;
+    height: 160px;
 }
 
 .donation-image {
