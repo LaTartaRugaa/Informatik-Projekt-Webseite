@@ -25,7 +25,8 @@
         $image_html = '';
 
         foreach ($sql_result_array as $user) {
-            $image_html .= '<div class="donation donation-image">';
+            $image_html .= '<div class="donation">';
+            $image_html .= '<div class="donation-image">';
 
             if ($user["image"] != NULL) {
                 $image_base64 = base64_encode($user["image"]);
@@ -35,6 +36,9 @@
             }
 
             $image_html .= '</div>';
+            $image_text = $user["prename"] . " " . $user["surname"] . ": " . $user["amount"] . " CHF";
+            $image_html .= '<div class="image-text">' . $image_text . '</div>';
+            $image_html .= '</div>';            
         }
 
         echo $image_html;
