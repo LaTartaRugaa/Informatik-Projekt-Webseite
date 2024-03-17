@@ -38,16 +38,16 @@
                 <div class="names-inputs">
                   <p>First name:</p>
                   <p>Last name:</p>
-                  <input class="input-field" type="text" name="prename" size="20" maxlength="30" />
-                  <input class="input-field" type="text" name="surname" size="20" maxlength="30" />
+                  <input class="input-field" type="text" name="prename" size="20" maxlength="30" required/>
+                  <input class="input-field" type="text" name="surname" size="20" maxlength="30" required/>
                 </div>
                 <div class="email-input">
                   <p>Email:</p>
-                  <input class="input-field" type="email" name="email" size="15" maxlength="30" />
+                  <input class="input-field" type="email" name="email" size="15" maxlength="30" required/>
                 </div>
                 <div class="amount-input">
                   <p>Amount:</p>
-                  <input class="input-field" type="text" name="amount" placeholder="CHF" size="15" maxlength="30" />
+                  <input class="input-field" type="number" name="amount" placeholder="CHF" size="15" maxlength="30" required/>
                 </div>
                 <div class="image-form">
                   <div class="image-input">
