@@ -127,6 +127,7 @@ img[src="*"]{
     height: fit-content;
     padding-left: 30px;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .donation {
