@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.11
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Erstellungszeit: 07. Mrz 2024 um 08:18
--- Server-Version: 5.7.39
+-- Host: database-5015514570.webspace-host.com
+-- Erstellungszeit: 17. Mrz 2024 um 12:22
+-- Server-Version: 8.0.32
 -- PHP-Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `donations`
+-- Datenbank: `dbs12673678`
 --
 
 -- --------------------------------------------------------
@@ -28,12 +29,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `inpayment` (
-  `id` int(11) NOT NULL,
-  `amount` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `amount` int NOT NULL,
   `prename` varchar(255) NOT NULL,
   `surname` varchar(255) NOT NULL,
-  `image` mediumblob
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `image` mediumblob,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Indizes der exportierten Tabellen
@@ -53,7 +55,7 @@ ALTER TABLE `inpayment`
 -- AUTO_INCREMENT für Tabelle `inpayment`
 --
 ALTER TABLE `inpayment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
