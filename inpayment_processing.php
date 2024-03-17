@@ -37,6 +37,6 @@
     $stmt->close();
     $conn->close();
 
-    header("Refresh: 1; URL=subpage_2.php");
+    echo '<meta http-equiv="refresh" content="1;url=subpage_2.php">';
 
 ?>
