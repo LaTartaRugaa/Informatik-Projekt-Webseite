@@ -25,6 +25,7 @@
             $blob_data = file_get_contents($_FILES["image"]["tmp_name"]);
             $stmt->bind_param("sssss", $amount, $prename, $surname, $email, $blob_data);
         } else {
+            echo '<meta http-equiv="refresh" content="1;url=subpage_2.php">';
             die("Max. file size is 1Mb");
         }
     }

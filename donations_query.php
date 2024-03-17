@@ -36,7 +36,7 @@
         }
 
         $image_html .= '</div>';
-        $image_text = $user["prename"] . " " . $user["surname"] . ": " . $user["amount"] . " CHF";
+        $image_text = $user["prename"] . " " . $user["surname"] . ":<br>" . $user["amount"] . " CHF";
         $image_html .= '<div class="image-text">' . $image_text . '</div>';
         $image_html .= '</div>';            
     }
