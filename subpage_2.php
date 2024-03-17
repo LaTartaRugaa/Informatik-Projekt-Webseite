@@ -22,7 +22,7 @@
             <div class="middle-section">
                 <a href="index.html" class="link-subpage">Home</a>
                 <a href="subpage_1.html" class="link-subpage">subpage 1</a>
-                <a href="subpage_2.html" class="link-subpage">subpage 2</a>
+                <a href="subpage_2.php" class="link-subpage">subpage 2</a>
                 <a href="subpage_3.html" class="link-subpage">subpage 3</a>
             </div>
             <div class="right-section">
@@ -68,22 +68,11 @@
               <input class="input-field submit-button" type="submit" value="Submit" />
             </div>
           </form>
+
           <div class="donations-container">
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation donation-image">
-              <img class="image" src="images/oelscheich-kostuem--mw-108452-1.webp">
-            </div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
-            <div class="donation">Donation</div>
+            <?php include 'donations_query.php'; ?>
           </div>
+          
         </div>
 
 
