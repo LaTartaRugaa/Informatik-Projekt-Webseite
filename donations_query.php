@@ -22,18 +22,22 @@
 
         $conn->close();
 
+        $image_html = '';
+
         foreach ($sql_result_array as $user) {
-            echo '<div class="donation donation-image">';
+            $image_html .= '<div class="donation donation-image">';
 
             if ($user["image"] != NULL) {
                 $image_base64 = base64_encode($user["image"]);
-                echo '<img class="image" src="data:image/jpeg;base64,' . $image_base64 . '">';
+                $image_html .= '<img class="image" src="data:image/jpeg;base64,' . $image_base64 . '">';
             } else {
-                echo '<img class="image" src=images/default_profile.png>';
+                $image_html .= '<img class="image" src=images/default_profile.png>';
             }
 
-            echo '</div>';
+            $image_html .= '</div>';
         }
+
+        echo $image_html;
 
         
     ?>
