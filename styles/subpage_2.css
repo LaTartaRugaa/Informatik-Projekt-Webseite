@@ -119,8 +119,6 @@ img[src="*"]{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
     right: 30px;
-    top: 90px;
-    bottom: 20px;
     width: 60%;
     height: fit-content;
     padding-left: 30px;
@@ -161,4 +159,11 @@ img[src="*"]{
 .image-text {
     max-width: 100%;
     word-wrap: break-word;
+}
+
+@media (max-width: 1460px) {
+    .donations-container {
+        top: 730px;
+        left: 30px;
+    }
 }
