@@ -48,6 +48,8 @@
 .right-section {
     display: flex;
     align-items: center;
+    padding-right: 100px;
+    justify-content: space-around;
     width: 300px;
     margin-left: 50px;
     min-width: 300px;
