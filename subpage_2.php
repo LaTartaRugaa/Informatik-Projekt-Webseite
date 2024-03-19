@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
         <meta charset="UTF-8" />
-        <title>Beispielformular</title>
 
     </head>
 
@@ -22,13 +21,15 @@
               </div>
             </div>
             <div class="middle-section">
-                <a href="index.html" class="link-subpage">Home</a>
-                <a href="subpage_1.html" class="link-subpage">subpage 1</a>
-                <a href="subpage_2.php" class="link-subpage">subpage 2</a>
-                <a href="subpage_3.html" class="link-subpage">subpage 3</a>
+                <a href="index.html" class="link-subpage">home</a>
+                <a href="subpage_1.html" class="link-subpage">about Ahmed</a>
+                <a href="subpage_2.php" class="link-subpage">donations</a>
+                <a href="subpage_3.html" class="link-subpage">wish list</a>
             </div>
             <div class="right-section">
-              <p>right</p>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-x-twitter"></i>
             </div>
         </div>
 
@@ -49,7 +50,7 @@
                 </div>
                 <div class="amount-input">
                   <p>Amount:</p>
-                  <input class="input-field" type="number" name="amount" placeholder="CHF" size="15" maxlength="30" required/>
+                  <input class="input-field" type="number" min="1" name="amount" placeholder="CHF" size="15" maxlength="30" required/>
                 </div>
                 <div class="image-form">
                   <div class="image-input">

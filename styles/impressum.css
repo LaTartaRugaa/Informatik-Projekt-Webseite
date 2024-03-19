@@ -1,0 +1,29 @@
+.impressum-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title,
+.subtitle,
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 50px 0 50px 0;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+.content {
+    margin: 4px;
+}

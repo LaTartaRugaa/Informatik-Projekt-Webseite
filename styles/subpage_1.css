@@ -6,6 +6,7 @@
     box-shadow: 3px 3px 3px rgb(99, 92, 50);
     border-radius: 10px;
     background-color: rgb(23, 23, 23);
+
 }
 
 .round-image {
@@ -14,4 +15,29 @@
     border-radius: 100px;
     object-fit: cover;
 
+}
+
+.donate-now-button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.donate-now-button {
+    background-color: rgb(255, 208, 0);
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.donate-now-button:hover {
+    opacity: 0.7;
+}
+
+.donate-now-link {
+    color: black;
+    font-size: 24px;
 }
