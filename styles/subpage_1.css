@@ -1,6 +1,11 @@
 .main {
-    background-color: lightgreen;
     display: flex;
+    flex-direction: column;
+    padding: 30px 20px 40px 20px;
+    border: 2px solid rgb(255, 208, 0);
+    box-shadow: 3px 3px 3px rgb(99, 92, 50);
+    border-radius: 10px;
+    background-color: rgb(23, 23, 23);
 }
 
 .round-image {
